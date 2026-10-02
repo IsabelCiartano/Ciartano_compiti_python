@@ -1,0 +1,30 @@
+#CIARTANO ISABEL ES 26
+
+1. Cos’è un thread? In che modo differisce da un processo?
+
+un thread è la più piccola unità schedulabile dal sistema operativo,
+cioè la più piccola eseguibile,essi si trovano all'interno dei processi 
+All'interno di un processo ogni thread esegue funzioni diverse parallelamente,
+infatti condividono lo spazio di indirazzamento e le risorse del processo
+
+
+2. Cosa si intende per “race condition”? Descrivi uno scenario reale (non scolastico) in cui può verificarsi.
+
+la race condition è una problematica che si verifica quando il risultato di un operazione
+dipende dall'ordine con cui i thread hanno avuto accesso alla variabile condivisa, non è quindi possibile controllarne 
+l'ordine e il risultato 
+un esempio potrebbe essere durante la prenotazione di un biglietto l'ultimo rimasto, se due persone nello stesso istante comprano il biglietto il risultato dipende dal 
+software quale delle due richieste farà accedere priam la risorsa e quindi chi acquista il biglietto 
+
+3. Cos’è un mutex/lock e come risolve la race condition?
+
+il mutex è un meccanismo che permette di fare modo che solo un processo o thread  alla volta possa accedere a una risorsa 
+condivisa
+esso risolve la race condition perchè i thread non accedono contemporaneamente alla risorsa ma uno dopo l'altro, 
+solamente quando un thread ha finito di usare la risorsa un altro potrà accedervi 
+
+4. Il metodo .join() è sempre necessario? Quando puoi ometterlo?
+No, .join() non è sempre necessario.
+Il metodo .join() è necessarioquando  serve a far aspettare il thread chiamante finché il thread specificato non termina.
+Quando il programma ha bisogno che quel thread abbia terminato prima di proseguire.
+si può omettere quando non interessa aspettare il risultato o la terminazione del thread e il programma può continuare autonomamente.

@@ -1,3 +1,5 @@
+#CIARTANO ISABEL ES 1
+
 #Senza eseguire il codice, scrivi cosa stampa ogni print. Poi verifica eseguendolo.
 
 s = "Informatica"
